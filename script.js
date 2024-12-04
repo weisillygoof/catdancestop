@@ -4,16 +4,13 @@ const imageElement = document.getElementById('scroll-image');
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
 
-  // Check if we're scrolling down or up
+  // Change image based on scroll direction
   if (currentScrollY > lastScrollY) {
-    // If we scroll down, show hip-right.png
-    imageElement.src = 'Images/hip-right.png';
+    imageElement.src = 'Images/hip-right.png'; // Change to right image on scroll down
   } else if (currentScrollY < lastScrollY) {
-    // If we scroll up, show hip-left.png
-    imageElement.src = 'Images/hip-left.png';
+    imageElement.src = 'Images/hip-left.png'; // Change to left image on scroll up
   }
 
-  // Update the last scroll position for next comparison
+  // Update scroll position
   lastScrollY = currentScrollY;
 });
-

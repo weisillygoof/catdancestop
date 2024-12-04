@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  background: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the body takes up full height */
+  height: 100vh; /* Full viewport height */
+  background: #f4f4f4;
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
@@ -13,22 +13,20 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw; /* Make container width 80% of the viewport */
-  height: 80vh; /* Make container height 80% of the viewport */
+  width: 80vw; /* Set container to 80% of viewport width */
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 img {
-  width: 100%; /* Image will now fill 100% of the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Image will take up 100% of the container size */
+  height: auto;
   transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Create scrollable area */
 .dummy-content {
-  height: 200vh; /* Make the page long enough to scroll */
-  width: 100%;
-  background-color: lightblue; /* For visibility */
+  height: 200vh; /* Ensure the page is tall enough to scroll */
+  background-color: lightblue; /* Add some color for visibility */
 }
